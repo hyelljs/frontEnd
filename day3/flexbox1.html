@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day3-1 css flexbox 연습1</title>
+    <style>
+        .container{ /* 선택자 공백은 손자들도 포함. > 는 자식만 */
+            background-color: dodgerblue;
+            display:flex;
+            flex-wrap: wrap;
+            /* flex-direction: column; */
+            justify-content: space-between;
+           
+        }
+        .container>div{ /*선택자 > 는 손자들도 포함. 공백은 자식만 */
+            border: 1px solid yellow;
+            background:#f1f1f1;
+            padding:20px 40px;
+            font-size:2em;
+            margin:10px;
+            width:100px; /* flex-direction: column; 확인을 위해 아이템 너비 설정 */
+        }
+    </style>
+</head>
+<body> <!-- flexbox 는 box 요소 태그 사용합니다. div 태그는 너비 기본값이 브라우저 너비 100% 입니다.-->
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>

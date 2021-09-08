@@ -1,0 +1,37 @@
+/* 태그 요소를 선택하는 선택자 (selector) 를 지정합니다.*/
+table{
+    width:600px;
+    /*태그요소의 외부 여백 (위. 아래, 왼, 오)*/
+    margin:auto;
+    border-collapse: collapse;      /*테이블 칸(셀) 사이의 간격 없애기*/
+    /* 위의 2개 중에 하나 설정해서 사용합니다. */
+}
+th{
+    color:white;
+    background-color: #198d23;
+    width:100px;
+    border:1px solid white;
+    height:25px;
+} 
+td{ /*선택자 : td 태그, 모든 td 태그에 적용합니다.*/
+    border:1px solid gray;
+    text-align: center;
+    width:100px;
+    height:25px;
+}
+th,td{
+    /*태그요소의 내부 여백 (위. 아래, 왼, 오)*/
+    padding-top:5px;
+    padding-bottom:5px;
+}
+th.rowspan,td.rowspan{
+    height:100px;
+}
+td.rowspan{
+    text-align:left;
+    font-size:12px;
+    vertical-align: top;
+}
+ul{
+    padding-left:20px;
+}
