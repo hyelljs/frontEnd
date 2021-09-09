@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mytest #1</title>
+    <!-- 스크립트 script 태그 작성할 수 있는 위치 1 -->
+    <script>
+        document.write(5+6);
+        let person1 = "Hege";
+        let person2="Hege";
+        document.write(person1+','+person2);
+        function myFunction() {
+        document.getElementById("demo1").innerHTML = "Hello Dolly!";
+        document.getElementById("demo2").innerHTML = "How are you?";
+        }   
+    </script>
+</head>
+<body>
+    <!-- 스크립트 script 태그 작성할 수 있는 위치 2 -->
+    <!-- 스크랩트는 html 이벤트 리스너 속성에 작성할 수 있습니다. -->
+    <!-- 자바스크립트에서 사용하는 문서 객체 : document 로 현재 보이는 웹문서의 요솔들에 접근한다.
+         자바스크립트에서 사용하는 브라우저 객체 : window 현재 실행 중인 브라우저를 제어한다. --> 
+    
+     <!-- 스크립트는 html 이벤트(사건) 속성에 작성할 수 있습니다. -->
+     <!-- onclick 이벤트 속성 값 "" 안에 자바스크립트 명령을 작성합니다. (주의 : 따옴표 겹칠때는 종류를 바꿔씁니다.) -->
+     <button onclick="document.getElementById('demo').innerHTML=Date()">
+        현재 날짜와 시간을 알려 줄께요.</button>
+     <button onclick="document.getElementById('demo').innerHTML=5 + 6">
+        5+6 의 결과</button>
+     <button type="button" onclick="document.write(5 + 6)">Try it</button>
+     <button onclick="window.print()">Print this page</button>
+     <!-- Date()는 함수입니다. -->
+     <button onclick="myFunction()">Click</button>
+     <p id="demo">innerHTML 위치입니다.</p>
+     <p id="demo1">innerHTML 위치입니다.</p>
+     <p id="demo2">innerHTML 위치입니다.</p>
+
+     
+</body>
+</html>
