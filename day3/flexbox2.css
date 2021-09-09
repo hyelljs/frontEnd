@@ -21,6 +21,23 @@ a{
     justify-content: center;
     padding:12px 15px;
 }
+html,body {
+    height: 100%;
+}
+.map_wrap {
+    display: flex;
+	flex-direction: column;
+	height: 100%;	
+}
+.footer {
+    border-top: 3px solid tomato;
+    font-size: 0.8 em;
+}
+.footer a,p {
+    font-size:12px;
+    color:brown;
+}
+
 /* 반응형으로 레이아웃 만들기
    해상도 최대 768px 까지 동작하도록 설정*/
 @media screen and (max-width:768px) {

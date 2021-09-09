@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>day3-4 member 회원 등록</title>
+    <link rel="stylesheet" href="member.css">
+    <script src="https://kit.fontawesome.com/04047691b8.js" crossorigin="anonymous"></script>
+    <!--<link rel="shortcut icon" href="../images/fav.ico" type="images/x-icon">-->
+    <link rel="icon" type="image/png" sizes="16x16"  href="../images/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <div style="width:700px;margin:auto;">
+        <h3>회원 등록 <i class="fas fa-seedling"></i></h3>
+        <!--
+            1) 새로운 데이터를 저장하는 동작과 관련될때는 url 창에
+            데이터를 표시안합니다. method="POST"
+            2) 특정 검색으로 조회 동작을 하는 경우네는 url 차에 파라미터값을 표시하는 것이
+            일반적입니다. method="GET"
+        -->
+        <form action="" method="POST">
+            <table>
+                <tr>
+                    <th><div>이름</div></th>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <th><div>패스워드</div></th>
+                    <td><input type="password" name="password"></td>
+                </tr>
+                <tr>
+                    <th><div>이메일</div></th>
+                    <td><input type="email" name="email"></td>
+                </tr>
+                <tr>
+                    <th><div>나이</div></th>
+                    <td><input type="number" name="age"></td>
+                </tr>
+                <tr>
+                    <th><div>주소</div></th>
+                    <td>
+                        <select name="adress" id="adress">
+                            <option value="서울">서울</option>
+                            <option value="인천">인천</option>
+                            <option value="경기">경기</option>
+                            <option value="대전">대전</option>
+                            <option value="광주">광주</option>
+                            <option value="부산">부산</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th><div>성별</div></th>
+                    <td>
+                        <!-- label 과 연결시킬 input은 id속성이 필요합니다. 웹접근성 구현
+                             label 을 선택해서 해당 form 요소가 focus를 갖도록 합니다.-->
+                        <input type="radio" id="male" name="gender">
+                        <label for="male">남자</label>
+                        <input type="radio" id="female" name="gender">
+                        <label for="female">여자</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th><div>취미</div></th>
+                    <!-- 여러개를 복수로 선택할 수 있는 체크박스를 사용합니다.
+                        name 을 같게합니다. 서버로 전송될때는 배열로 처리됩니다.-->
+                    <td>
+                        <input type="checkbox" id="football" value="축구" name="hobby">
+                        <label for="football">축구</label>
+                        <input type="checkbox" id="basketball" value="농구" name="hobby">
+                        <label for="basketball">농구</label>
+                        <input type="checkbox" id="ski" value="스키" name="hobby">
+                        <label for="ski">스키</label>
+                        <input type="checkbox" id="running" value="달리기" name="hobby">
+                        <label for="running">달리기</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="last-td txtcenter">
+                        <input type="submit" value="가입하기">
+                        <input type="reset" value="다시쓰기">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
