@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toggle</title>
+</head>
+<body>
+    <!-- <script>
+        function toggle(){
+            if(document.getElementById('toggle').innerText == 'Toggle-on'){
+                document.getElementById('toggle').innerHTML='Toggle-off';
+                document.getElementById('myImage').src='../images/pic_bulbon.gif';
+            }else{
+                document.getElementById('toggle').innerHTML='Toggle-on';
+                document.getElementById('myImage').src='../images/pic_bulboff.gif';
+            }
+        }
+        function toggleImg(){
+            if( document.getElementById('myImage').classList.contains('on')){
+                document.getElementById('myImage').remveClass('on');
+                document.getElementById('myImage').src='../images/pic_bulboff.gif';
+            }else{
+                document.getElementById('myImage').addClass('on');
+                document.getElementById('myImage').src='../images/pic_bulbon.gif';
+            }
+        }
+    </script> -->
+    <h2>자바스크립트로 이런것도 해봅시다</h2>
+    <p>HTML 태그의 속성값 변경하기 : img 태그의 이미지 파일명을 지정하는 <strong>src 속성값을 변경</strong>하는 예제 입니다.</p>
+    <p>HTML 태그의 속성값 변경하기 : em 태그의 텍스트 <strong>스타일 color값을 변경</strong>하는 예제 입니다.</p>
+    <p>전구를 클릭해보세. 현재상태 : <em id="state" style="color:green">ON</em></p>
+    <!-- <button id="toggle" onclick="toggle()">Toggle-on</button> -->
+    <button onclick="bulbOn()">불을 켜주세요</button>
+    <img id="myImage" alt="light" src="../images/pic_bulbon.gif" style="width:100px; cursor: pointer;" onclick="bulbToggle()">
+    <button onclick="bulbOff()">불을 꺼주세요</button>
+    <!-- body 안에 있는 것들은 순서대로 실행됩니다. img 태그가 script 뒤에 있으면 오류 : 변수 호이스팅 때문에 onoff가 null -->
+    <script>
+        let state=1;    // 전역변수 입니다. 1이면 on 0이면 off
+        const img = document.getElementById('myImage');    //태그 요소를 가져와 변수 로 참조.const 는 값의 변경을 안할때 사용합니다.
+        const onoff = document.getElementById('state');
+        function bulbToggle(){ //이벤트 핸들러 : onclick 이벤트 발생시 실행되는 함수
+            if(state==1){
+                bulbOff();
+                state=0;
+            }else{  // 현재 0입니다.
+                bulbOn();
+                state=1;
+            }
+        }
+        function bulbOn(){
+            img.src='../images/pic_bulbon.gif';
+            onoff.innerHTML='ON';
+            onoff.style.color='green';
+        }
+        function bulbOff(){
+            img.src='../images/pic_bulboff.gif';
+            onoff.innerHTML='OFF';
+            onoff.style.color='red';
+        }
+    </script>
+</body>
+</html>

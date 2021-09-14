@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원 등록 </title><!-- 스타일 참고  -->
+<style type="text/css">
+td {
+	padding: 10px;
+	/* 	border: 1px solid gray; */
+}
+
+table {
+	border-bottom: 1px solid gray;
+	border-top: 1px solid gray;
+}
+
+input, select {
+	padding: 7px;
+	border-radius: 4px;
+	border: 2px solid #ccc;
+	box-sizing: border-box;
+}
+
+input[type=text], input[type=password], input[type=email] {
+	width: 70%;
+}
+
+input[type=number], select {
+	width: 20%;
+}
+
+input[type=submit], input[type=reset] {
+	padding: 7px 15px;
+	margin: 7px 15px;
+	cursor: pointer;
+	background: #cc3399;
+	font-size: 1.1em;
+	color: white;
+	border: none;
+}
+
+input[type=submit]:hover, input[type=reset]:hover {
+	background: #cc6699;
+}
+
+label {
+	display: inline-block;
+	width: 60%;
+	padding: 10px;
+	margin: auto;
+	background: #cc6699;
+	border-radius: 4px;
+	text-align: center;
+	color: #eee;
+	width: 60%;
+}
+</style>
+<!--   1. td 태그는 왼쪽으로 정렬하기, th와 td태그 안쪽 여백 조정하기
+         2. input, select 태그에 padding , width 적용하기
+         3. 사용자폼 태그들의 스타일 설정해보기
+         4. box-sizing 속성이란?
+-->
+</head>
+<body>
+	<div style="width: 70%; margin: auto;">
+		<h3>회원 등록</h3>
+		<form>
+			<table style="width: 100%">
+				<tr>
+					<td><label>이름</label></td>
+					<td><input type="text" name="name"></td>
+				</tr>
+				<tr>
+					<td><label>패스워드</label></td>
+					<td><input type="password" name="name"></td>
+				</tr>
+				<tr>
+					<td><label>이메일</label></td>
+					<td><input type="email" name="email"></td>
+				</tr>
+				<tr>
+					<td><label>나이</label></td>
+					<td><input type="number" name="age" min="10" max="99"
+						value="30"></td>
+				</tr>
+				<tr>
+					<td><label>주소</label></td>
+					<td><select name="addr">
+							<!-- value 속성은 서버에 전달시킬 값 -->
+							<option value="서울">서울</option>
+							<option value="인천" selected>인천</option>
+							<option value="대전">대전</option>
+							<option value="광주">광주</option>
+							<option value="부산">부산</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td><label>이름</label></td>
+					<td><input type="radio" value="male" name="gender">남자
+						<input type="radio" value="female" name="gender" checked>여자
+					</td>
+				</tr>
+				<tr>
+					<td><label>취미</label></td>
+					<td>
+						<!-- 복수 선택이 가능 --> <input type="checkbox" name="hobby" value="축구">축구
+						<input type="checkbox" name="hobby" value="농구" checked>농구
+						<input type="checkbox" name="hobby" value="스키">스키 <input
+						type="checkbox" name="hobby" value="달리기">달리기
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align: center"><input
+						type="submit" value="가입하기"> <input type="reset"
+						value="다시쓰기"></td>
+				</tr>
+
+			</table>
+		</form>
+	</div>
+</body>
+</html>

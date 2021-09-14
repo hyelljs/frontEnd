@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>final_ex 김혜리</title>
+    <style>
+        table{border-collapse: collapse;}
+        #for{margin-bottom: 20px;}
+        #for tr#time td{background-color:#888; color:#fff;}
+        #for td{text-align: center; padding:10px 15px; border:1px solid #888;}
+
+        #foreach tr#time2 td{background-color:rgb(85, 67, 52); color:#fff;}
+        #foreach td{text-align: center; padding:10px 15px; border:1px solid rgb(85, 67, 52);}
+    </style>
+</head>
+<body>
+    <!-- 문제 : 아래 2개 배열의 값을 이요하여 화면 보기 좋은 UI를 만들어보세요. -->
+    <table id="for">
+        <tr id="time">
+
+        </tr>
+        <tr id="todo">
+
+        </tr>
+    </table>
+
+    <table id="foreach">
+        <tr id="time2">
+
+        </tr>
+        <tr id="todo2">
+
+        </tr>
+    </table>
+    <script>
+        const arr_time = ['09:00','11:00','12:30','14:00','16:45']; //시간
+        const arr_todo = ['수업','과제','점심식사','주간 회의','자료조사']; //할일
+
+        let txt_time = "";
+        for (let i = 0; i<arr_time.length;i++){
+            txt_time += "<td>";
+            txt_time += arr_time[i];
+            txt_time += "</td>";
+        }
+        document.getElementById('time').innerHTML = txt_time;
+
+        let txt_todo = "";
+        for (let i = 0; i<arr_todo.length;i++){
+            txt_todo += "<td>";
+            txt_todo += arr_todo[i];
+            txt_todo += "</td>";
+        }
+        document.getElementById('todo').innerHTML = txt_todo;
+        
+        let txt_time2 ="";
+        arr_time.forEach(function(value,index,array){
+                txt_time2 +="<td>" + value+ "</td>";
+        });
+        document.getElementById('time2').innerHTML = txt_time2;
+
+        let txt_todo2 ="";
+        arr_todo.forEach(function(value,index,array){
+                txt_todo2 +="<td>" + value+ "</td>";
+        });
+        document.getElementById('todo2').innerHTML = txt_todo2;
+    </script>
+</body>
+</html>
